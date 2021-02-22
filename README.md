@@ -1,5 +1,13 @@
 # ScheduleTask
-Task Scheduler
+Task Scheduler - Functionalities 
+1. User or Admin can sign in using unique login and password securely (this is hard coded and password is encoded before saving in DB)
+2. User can view her/his task list
+3. User can add/remove task
+4. All changes are persistent to allow view them in next sign in by the same user
+5. Each task is display the description
+6. Admin can view all users and delete user.
+
+
 
 The implementation of DAO layers that provide CRUD functionality on JPA entities can be a repetitive, time-consuming task that we want to avoid in most cases. Luckily, Spring Boot makes it easy to create CRUD applications through a layer of standard JPA-based CRUD repositories.
 
