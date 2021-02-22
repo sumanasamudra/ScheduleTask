@@ -107,6 +107,15 @@ Now, let's hit “Run” in our IDE, then open up our browser and point it to ht
 3 "user2@mail.com"     "user1234user!"
 
 
+# Additional features and security functionality of the application
+1. Encode the Password on Registration or save encoded password in database:
+Encode the Password on Authentication using # BCryptPasswordEncoder
+2. Role based authorization - Admin role can delete or view all the users
+Refer SecurityConfig.java class- 
+http.authorizeRequests().antMatchers("/register", "/", "/about", "/login","/confirm", "/css/**", "/webjars/**").permitAll()
+				.antMatchers("/profile").hasAnyRole("USER,ADMIN")
+				.antMatchers("/users1").hasRole("ADMIN")
+				.antMatchers("/users","/addTask").permitAll()
 
  
 
